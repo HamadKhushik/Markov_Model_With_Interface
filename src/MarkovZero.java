@@ -1,8 +1,8 @@
 import java.util.Random;
 
-public class MarkovZero implements IMarkovModel {
-    private String myText;
-    private Random myRandom;
+public class MarkovZero extends AbstractMarkovModel {
+    //private String myText;
+    //private Random myRandom;
 
     public MarkovZero() {
         myRandom = new Random();
@@ -27,6 +27,10 @@ public class MarkovZero implements IMarkovModel {
         }
 
         return sb.toString();
+    }
+
+    public String toString() {
+        return "Markov Model of Order 0";
     }
 }
 

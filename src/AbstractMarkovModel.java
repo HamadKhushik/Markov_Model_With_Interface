@@ -15,7 +15,7 @@ public abstract class AbstractMarkovModel implements IMarkovModel {
 
     abstract public String getRandomText(int numChars);
 
-    protected ArrayList<String> getFollows(String key) {
+    public ArrayList<String> getFollows(String key) {
         ArrayList<String> follows = new ArrayList<String>();
         for (int i = 0; i < myText.length() - key.length(); i++) {
             if (myText.substring(i, i + key.length()).equals(key)) {
@@ -24,5 +24,4 @@ public abstract class AbstractMarkovModel implements IMarkovModel {
         }
         return follows;
     }
-
 }
